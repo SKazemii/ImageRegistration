@@ -1,8 +1,8 @@
 from cv2 import cv2
 from matplotlib import pyplot as plt
 
-img1 = cv2.imread("1.jpeg", cv2.COLOR_BGR2GRAY)  # queryImage
-# img2 = cv2.imread("2.jpeg", cv2.COLOR_BGR2GRAY)  # trainImage
+img1 = cv2.imread("images/1.jpeg", cv2.COLOR_BGR2GRAY)  # queryImage
+# img2 = cv2.imread("images/2.jpeg", cv2.COLOR_BGR2GRAY)  # trainImage
 
 # rotMat = cv2.getRotationMatrix2D((90, 125), 45, 1.0)
 # img2 = cv2.warpAffine(img1, rotMat, img1.shape[:2])
@@ -69,7 +69,7 @@ img3 = cv2.drawMatchesKnn(
 plt.title("SIFT")
 plt.imshow(img3), plt.show()
 
-cv2.imwrite("sift_result.jpg", img3)
+cv2.imwrite("images/images/sift_result.jpg", img3)
 
 print("sift was done...!")
 
@@ -116,7 +116,7 @@ img3 = cv2.drawMatches(img1, kp1, img2, kp2, matches[:10], None, flags=2)
 plt.title("BRISK")
 plt.imshow(img3), plt.show()
 
-cv2.imwrite("BRISK_result.jpg", img3)
+cv2.imwrite("images/BRISK_result.jpg", img3)
 
 print("BRISK was done...!")
 
@@ -167,7 +167,7 @@ img3 = cv2.drawMatches(img1, kp1, img2, kp2, matches[:10], None, flags=2)
 plt.title("BRIEF")
 plt.imshow(img3), plt.show()
 
-cv2.imwrite("BRIEF_result.jpg", img3)
+cv2.imwrite("images/BRIEF_result.jpg", img3)
 
 print("BRIEF was done...!")
 
@@ -219,7 +219,7 @@ img3 = cv2.drawMatches(img1, kp1, img2, kp2, matches[:10], None, flags=2)
 plt.title("FREAK")
 plt.imshow(img3), plt.show()
 
-cv2.imwrite("FREAK_result.jpg", img3)
+cv2.imwrite("images/FREAK_result.jpg", img3)
 
 print("FREAK was done...!")
 
@@ -268,6 +268,6 @@ img3 = cv2.drawMatches(img1, kp1, img2, kp2, matches[:10], None, flags=2)
 plt.title("ORB")
 plt.imshow(img3), plt.show()
 
-cv2.imwrite("ORB_result.jpg", img3)
+cv2.imwrite("images/ORB_result.jpg", img3)
 
 print("ORB was done...!")
